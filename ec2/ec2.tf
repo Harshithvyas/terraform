@@ -1,19 +1,19 @@
 resource "aws_security_group" "allow_all" {
-  name        = "allow-all-tf" # changed name to avoid duplicate
+  name        = "allow-all-tf"
   description = "Security group that allows all inbound and outbound traffic"
 
   ingress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"          # -1 means all protocols
-    cidr_blocks = ["0.0.0.0/0"] # allows all inbound connections
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"          # -1 means all protocols
-    cidr_blocks = ["0.0.0.0/0"] # allows all outbound connections
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
